@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 
-const VerticalContainer = styled.div`
+const HorizontalContainer = styled.div`
     display: flex;
     flex: 1;
-    flex-direction: column;
+    flex-direction: row;
     border: 2px solid black;
     padding: 16px;
     margin: 10px 0;
 `;
 
-export default VerticalContainer;
+export default HorizontalContainer;

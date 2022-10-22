@@ -1,32 +1,22 @@
-import React, { useCallback, useState } from 'react'
-import styled from 'styled-components';
-import { VerticalContainer } from '../../components';
-
-type IEvent = React.FormEvent<HTMLInputElement>
+import React, { useState } from 'react'
+import { HorizontalContainer, Input, Result, VerticalContainer } from '../../components';
 
 const Form = () => {
-  const [value, setValue] = useState('');
-  const handleChange = useCallback((e: IEvent) => {
-    setValue(e.currentTarget.value);
-  }, [setValue])
+  const [name, setName] = useState('');
+  const [surname, setSurname] = useState('');
 
   return (
-    <VerticalContainer>
-      Form
-      <Input value={value} onChange={handleChange} />
-      Result
-      <Result isEmpty={!value}>{value || 'empty'}</Result>
-    </VerticalContainer> 
+    <HorizontalContainer>
+      <VerticalContainer>
+        <Input title='Name' onChange={setName}/>
+        <Input title='Surname' onChange={setSurname} />
+      </VerticalContainer>
+
+      <Result name={name} surname={surname} />
+    </HorizontalContainer>
   )
 }
 
-const Input = styled.input`
-  margin: 10px 0;
-  width: 30%;
-`;
 
-const Result = styled.div<{isEmpty: boolean}>`
-  opacity: ${({isEmpty}) => isEmpty ? 0.3 : 1}
-`;
 
 export default Form;
