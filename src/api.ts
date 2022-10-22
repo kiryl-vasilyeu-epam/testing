@@ -10,7 +10,7 @@ const apiCall = async (name: string): Promise<string[]> => {
 
 export  { apiCall }
 
-const fruits = [
+export const fruits = [
   'Apple',
   'Apricot',
   'Avocado',

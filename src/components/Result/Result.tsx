@@ -7,13 +7,13 @@ type IProps = { name: string; surname: string };
 const Result: React.FC<IProps> = ({ name, surname }) => {
   const [nameColor, setNameColor] = useState('black');
   useEffect(() => {
-    const color = getRandomColor()
+    const color = getRandomColor();
     setNameColor(color)
   }, [name]);
 
   const [surnameColor, setSurnameColor] = useState('black');
   useEffect(() => {
-    const color = getRandomColor()
+    const color = getRandomColor();
     setSurnameColor(color)
   }, [surname]);
 

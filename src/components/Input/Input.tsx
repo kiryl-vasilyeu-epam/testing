@@ -13,8 +13,8 @@ const Input: React.FC<IProps> = ({ title, onChange }) => {
   const handleChange = useCallback((e: IEvent) => {
     const { value } = e.currentTarget
     setValue(value);
-    onChange?.(value)
-  }, [onChange])
+    onChange?.(value);
+  }, [onChange]);
 
   return (
     <Container>
@@ -24,7 +24,7 @@ const Input: React.FC<IProps> = ({ title, onChange }) => {
   )
 }
 
-const Container = styled.div`
+const Container = styled.label`
   display: flex;
   flex-direction: column;
 `;

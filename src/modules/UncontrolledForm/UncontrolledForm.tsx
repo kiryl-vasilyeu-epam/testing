@@ -19,29 +19,29 @@ const UncontrolledForm = () => {
 
   return (
     <HorizontalContainer>
-    <VerticalContainer>
-      <form onSubmit={handleSubmit}>
+      <VerticalContainer>
+        <form onSubmit={handleSubmit}>
 
-        <Field>
-          Name:
-          <input ref={nameRef} name="name" />
-        </Field>
+          <Field>
+            Name:
+            <input ref={nameRef} name="name" />
+          </Field>
 
-        <Field>
-          Surname:
-          <input ref={surnameRef} name="surname" />
-        </Field>
+          <Field>
+            Surname:
+            <input ref={surnameRef} name="surname" />
+          </Field>
 
-        <input type="submit" value="Save" />
-      </form>
-    </VerticalContainer>
+          <input type="submit" value="Save" />
+        </form>
+      </VerticalContainer>
 
-    <Result name={name} surname={surname} />
+      <Result name={name} surname={surname} />
     </HorizontalContainer>
   )
 }
 
-const Field = styled.div`
+const Field = styled.label`
   display: flex;
   flex-direction: column;
   margin: 10px 0;
