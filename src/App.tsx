@@ -1,10 +1,12 @@
 import React from 'react';
+import { VerticalContainer } from './components';
+import { Form } from './modules';
 
 function App() {
   return (
-    <div>
-      Hi
-    </div>
+    <VerticalContainer>
+      <Form />
+    </VerticalContainer>
   );
 }
 
