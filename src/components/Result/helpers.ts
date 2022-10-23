@@ -3,7 +3,7 @@ export const getRandomColor = () => {
   return CSS_COLOR_NAMES[rnd];
 }
 
-const CSS_COLOR_NAMES = [
+export const CSS_COLOR_NAMES = [
   "AliceBlue",
   "AntiqueWhite",
   "Aqua",

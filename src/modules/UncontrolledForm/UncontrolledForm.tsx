@@ -13,8 +13,8 @@ const UncontrolledForm = () => {
   
   const handleSubmit = useCallback((e: IEvent) => {
     e.preventDefault();
-    setName(nameRef.current?.value ?? '');
-    setSurname(surnameRef.current?.value ?? '');
+    setName(nameRef.current?.value || 'default');
+    setSurname(surnameRef.current?.value || 'default');
   }, [])
 
   return (

@@ -10,11 +10,13 @@ interface IProps {
 const Input: React.FC<IProps> = ({ title, onChange }) => {
   const [value, setValue] = useState('');
 
-  const handleChange = useCallback((e: IEvent) => {
-    const { value } = e.currentTarget
-    setValue(value);
-    onChange?.(value);
-  }, [onChange]);
+  const handleChange = useCallback(
+    (e: IEvent) => {
+      const { value } = e.currentTarget
+      setValue(value);
+      onChange?.(value);
+    }
+  , [onChange]);
 
   return (
     <Container>

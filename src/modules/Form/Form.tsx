@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { HorizontalContainer, Input, Result, VerticalContainer } from '../../components';
 
 const Form = () => {
